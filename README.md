@@ -30,7 +30,7 @@
         ㅇ 명확히 SK텔레콤 지침에 맞지 않는 작업의 경우 보류토록하여 잔여 작업은 사람이 직접 검토해야함
 
 ### 활용 라이브러리
-    - 
     - selenium
+    - pyautogui
     - pandas
     - pyinstaller
