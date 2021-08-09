@@ -20,12 +20,10 @@ import pyperclip
 print('!알림 : 외부망 승인 가능 계정 로그인')
 userId = input('아이디 : ')
 userPwd = input('비밀번호 : ')
-# userId = 'SKN20001243'
-# userPwd = 'Rkfka.411l@'
 
 ## TANGO 로그인 페이지 접속
 # Chrome의 경우 아까 받은 chromedriver의 위치를 지정해준다.
-login_url = 'https://www.tango.sktelecom.com/tango-common-business-web/login/Login.do'  # TANGO 로그인 페이지
+login_url = '####'  # TANGO 로그인 페이지
 # driver = webdriver.Chrome('C:\\Users\\SKNS\\PycharmProjects\\chromedriver', options=options)  # headless 활용
 driver = webdriver.Chrome()  # 드라이버 접근
 driver.get(login_url)  # TANGO 로그인 페이지 접속
@@ -137,7 +135,7 @@ except:
     time.sleep(10)
 
 ## 보안 뚫기
-print('!알림 : TANGO 보안 뚫는 중...')
+print('!알림 : TANGO 랜덤 ID Searching...')
 for i in range(1000):
     try:
         secret_xpath_obj = driver.find_element_by_xpath('//*[@id="alopexgrid{0}-0-6"]'.format(i))
@@ -156,7 +154,7 @@ def xpath_job_by_idx(row, column, xpath):
     xpath_split[-1] = str(column) + '"]'
     result = '-'.join(xpath_split)
     return result
-print('!알림 : TANGO 보안 ID 추출 완료')
+print('!알림 : TANGO 랜덤 ID 추출 완료')
 
 ##
 def confirm_skt_time_rule(row):
